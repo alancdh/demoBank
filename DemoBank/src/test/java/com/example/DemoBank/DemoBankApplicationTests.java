@@ -13,14 +13,14 @@ private WebDriver driver;
 
 	String cadenaName = generaRandom.FirstNameRandom();
 	String cadenaLast = generaRandom.LastNameRandom();
-	String AdressRandom = generaRandom.LastNameRandom();
-	String CityRandom = generaRandom.LastNameRandom();
-	String StateRandom = generaRandom.LastNameRandom();
-	String ZipCodeRandom = generaRandom.LastNameRandom();
-	String PhoneRandom = generaRandom.LastNameRandom();
-	String SnnRandom = generaRandom.LastNameRandom();
-	String UsernameRandom = generaRandom.LastNameRandom();
-	String PasswordRandom = generaRandom.LastNameRandom();
+	String AdressRandom = generaRandom.AdressRandom();
+	String CityRandom = generaRandom.CityRandom();
+	String StateRandom = generaRandom.StateRandom();
+	String ZipCodeRandom = generaRandom.zipCodeRandom();
+	String PhoneRandom = generaRandom.PhoneRandom();
+	String SnnRandom = generaRandom.SnnRandom();
+	String UsernameRandom = generaRandom.UsernameRandom();
+	String PasswordRandom = generaRandom.PasswordRandom();
 
 	@BeforeEach
 	void getUp(){
@@ -53,6 +53,7 @@ private WebDriver driver;
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[1]/input")).sendKeys(Usuario);
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[2]/input")).sendKeys(Contrasenia);
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[3]/input")).click();
+			driver.close();
 		}else{
 			driver.close();
 			System.out.println("No se pudo completar el registro");
