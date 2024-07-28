@@ -50,6 +50,7 @@ private WebDriver driver;
 
 		if (driver.getPageSource().contains("Your account was created successfully. You are now logged in.")){
 			driver.findElement(By.xpath("//*[@id=\"leftPanel\"]/ul/li[8]/a")).click();
+			driver.get("https://parabank.parasoft.com/parabank/index.htm");
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[1]/input")).sendKeys(Usuario);
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[2]/input")).sendKeys(Contrasenia);
 			driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[3]/input")).click();
